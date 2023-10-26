@@ -67,5 +67,6 @@ namespace Guard_Pass.Models
         Private = 50,
         Discord = 51,
         LoL = 52,
+        Albion = 53,
     }
 }

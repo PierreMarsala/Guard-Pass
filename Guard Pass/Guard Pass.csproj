@@ -6,6 +6,7 @@
     <RootNamespace>Guard_Pass</RootNamespace>
     <Nullable>enable</Nullable>
     <UseWPF>true</UseWPF>
+    <ApplicationIcon>Images\Icons\logo.ico</ApplicationIcon>
   </PropertyGroup>
 
   <ItemGroup>
@@ -93,6 +94,10 @@
     <None Remove="Images\Templates\7.png" />
     <None Remove="Images\Templates\8.png" />
     <None Remove="Images\Templates\9.png" />
+  </ItemGroup>
+
+  <ItemGroup>
+    <Content Include="Images\Icons\logo.ico" />
   </ItemGroup>
 
   <ItemGroup>
