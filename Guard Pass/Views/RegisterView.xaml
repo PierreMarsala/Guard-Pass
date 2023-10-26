@@ -1,0 +1,128 @@
+﻿<Window x:Class="Guard_Pass.Views.RegisterView"
+        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+        xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+        xmlns:local="clr-namespace:Guard_Pass.Views"
+        xmlns:fa="http://schemas.fontawesome.io/icons/"
+        mc:Ignorable="d"
+        Title="LoginWindow" Height="400" Width="350"
+        WindowStartupLocation="CenterScreen" 
+        WindowStyle="None"
+        ResizeMode="NoResize" 
+        Background="Transparent"
+        AllowsTransparency="True" MouseDown="Window_MouseDown">
+
+    <Border CornerRadius="5">
+
+        <!--Background image-->
+        <Border.Background>
+            <ImageBrush x:Name="Image_Background" ImageSource="pack://application:,,,/Images/Backgrounds/1.jpg" />
+        </Border.Background>
+
+        <Border CornerRadius="5" BorderThickness="2" Opacity="0.60">
+
+            <!--Border window-->
+            <Border.BorderBrush>
+                <SolidColorBrush Color="{StaticResource Border}" />
+            </Border.BorderBrush>
+            <!--Background gradiant-->
+            <Border.Background>
+                <SolidColorBrush Color="{StaticResource Color1}" />
+            </Border.Background>
+
+            <Grid>
+                <Grid.RowDefinitions>
+                    <RowDefinition Height="30"/>
+                    <RowDefinition Height="*"/>
+                </Grid.RowDefinitions>
+    
+                <!--...............TOP VIEW..................-->
+                <!--Background color-->
+                <Rectangle Grid.Row="0">
+                    <Rectangle.Fill>
+                        <SolidColorBrush Color="{StaticResource Color0}" Opacity="0.9" />
+                    </Rectangle.Fill>
+                </Rectangle>
+                
+                <!--black line-->
+                <Rectangle Grid.Row="0" Margin="0,29,0,0">
+                    <Rectangle.Fill>
+                        <SolidColorBrush Color="Black" Opacity="0.1" />
+                    </Rectangle.Fill>
+                </Rectangle>
+
+                <!--Top view structure-->
+                <StackPanel Orientation="Horizontal">
+                    <Image Source="pack://application:,,,/Images/Icons/logo.jpg" Width="20" Height="20" Margin="3,0,0,0"/>
+
+                    <!--Title-->
+                    <TextBlock Text="Guard Pass" Style="{StaticResource TextStyle}" Margin="5,0,0,0"/>
+                    
+                    <!--Button minus-->
+                    <Button Name="Btn_Minus" Style="{StaticResource BtnWindowStyle}" Margin="210,0,10,0" Cursor="Hand" Click="btnMinimize_Click">
+                        <fa:ImageAwesome Icon="Minus" Foreground="{StaticResource TitleColor}"/>
+                    </Button>
+
+                    <!--Button close-->
+                    <Button Name="Btn_Close" Style="{StaticResource BtnWindowStyle}" Margin="10,0,10,0" Cursor="Hand" Click="btnClose_Click">
+                        <fa:ImageAwesome Icon="Times" Foreground="{StaticResource TitleColor}"/>
+                    </Button>
+                </StackPanel>
+                
+                <!--..............BOTTOM VIEW................-->
+                <StackPanel Grid.Row="1">
+                    
+                    <!--Drapeau= Language-->
+                    <Button x:Name="Btn_Language" Click="Btn_Language_Click" Background="Transparent" BorderBrush="Transparent" Width="30" Height="20" HorizontalAlignment="Right" Margin="0,2,2,0">
+                        <Image x:Name="Image_Flag" Source="pack://application:,,,/Images/Icons/fr.jpg"/>
+                    </Button>
+
+                    <!--Logo-->
+                    <Image Source="pack://application:,,,/Images/Icons/logo.jpg" Width="100" Height="100" Margin="0,-10,0,0">
+                        <Image.Effect>
+                            <DropShadowEffect/>
+                        </Image.Effect>
+                    </Image>
+
+                    <!--Window title-->
+                    <TextBlock Text="{DynamicResource CreateAccount}" HorizontalAlignment="Center" Style="{StaticResource TitleStyle}" Margin="10" FontSize="20">
+                        <TextBlock.Effect>
+                            <DropShadowEffect/>
+                        </TextBlock.Effect>
+                    </TextBlock>
+
+                    <!--First password-->
+                    <TextBlock Text="{DynamicResource Password}" Style="{StaticResource TextStyle}" Margin="85,0,0,5"/>
+                    <StackPanel Orientation="Horizontal">
+                        <fa:ImageAwesome x:Name="Image_Lock1" Icon="lock" Foreground="{StaticResource TitleColor}" Width="16" Height="16" Margin="85,0,5,0"/>
+                        <PasswordBox x:Name="Password_First" Width="150"/>
+                    </StackPanel>
+
+
+                    <!--Second password-->
+                    <TextBlock Text="{DynamicResource ValidPassword}" Style="{StaticResource TextStyle}" Margin="85,10,0,5"/>
+                    <StackPanel Orientation="Horizontal">
+                        <fa:ImageAwesome x:Name="Image_Lock2" Icon="lock" Foreground="{StaticResource TitleColor}" Width="16" Height="16" Margin="85,0,5,0"/>
+                        <PasswordBox x:Name="Password_Second" Width="150"/>
+                    </StackPanel>
+
+                    <!--Button register-->
+                    <Button x:Name="Btn_Register" Content="{DynamicResource Register}" Margin="0,20,0,0" Style="{StaticResource BtnRoundedStyle}" Click="Btn_Register_Click"/>
+
+                    <!--Already have an account text-->
+                    <StackPanel Orientation="Horizontal" HorizontalAlignment="Center" Margin="0,10,0,0">
+                        <TextBlock Text="{DynamicResource AlreadyAccount}" Style="{StaticResource TextStyle}" FontSize="11"/>
+                        <Button Name="Btn_Login" Content="{DynamicResource Account}" Style="{StaticResource BtnTextStyle}" Margin="3,0,0,3" Click="Btn_Login_Click" Cursor="Hand"/>
+                        <TextBlock Text=" ?" Style="{StaticResource TextStyle}" FontSize="11"/>
+                    </StackPanel>
+
+                    <!--Drapeau= Language-->
+                    <Button x:Name="Btn_Dice" Click="Btn_Dice_Click" Background="Transparent" BorderBrush="Transparent" Width="20" Height="20" HorizontalAlignment="Right" Margin="0,10,5,0">
+                        <Image Source="pack://application:,,,/Images/Icons/dice.png" Opacity="0.6"/>
+                    </Button>
+                </StackPanel>
+            </Grid>
+        </Border>
+    </Border>
+</Window>

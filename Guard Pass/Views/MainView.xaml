@@ -1,0 +1,181 @@
+﻿<Window x:Class="Guard_Pass.Views.MainView"
+        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+        xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+        xmlns:local="clr-namespace:Guard_Pass.Views"
+        xmlns:fa="http://schemas.fontawesome.io/icons/"
+        mc:Ignorable="d"
+        Title="LoginWindow" Height="550" Width="800"
+        WindowStartupLocation="CenterScreen" 
+        WindowStyle="None"
+        ResizeMode="NoResize" 
+        Background="Transparent"
+        AllowsTransparency="True" MouseDown="Window_MouseDown">
+
+    <Border CornerRadius="5">
+
+        <!--Background image-->
+        <Border.Background>
+            <ImageBrush x:Name="Image_Background" ImageSource="pack://application:,,,/Images/Backgrounds/1.jpg" />
+        </Border.Background>
+
+        <Border CornerRadius="5" BorderThickness="2" Opacity="0.60">
+
+            <!--Border window-->
+            <Border.BorderBrush>
+                <SolidColorBrush Color="{StaticResource Border}" />
+            </Border.BorderBrush>
+            <!--Background gradiant-->
+            <Border.Background>
+                <SolidColorBrush Color="{StaticResource Color1}" />
+            </Border.Background>
+
+            <Grid>
+                <Grid.RowDefinitions>
+                    <RowDefinition Height="30"/>
+                    <RowDefinition Height="*"/>
+                </Grid.RowDefinitions>
+
+                <!--...............TOP VIEW..................-->
+                <!--Background color-->
+                <Rectangle Grid.Row="0">
+                    <Rectangle.Fill>
+                        <SolidColorBrush Color="{StaticResource Color0}" Opacity="0.9" />
+                    </Rectangle.Fill>
+                </Rectangle>
+
+                <!--black line-->
+                <Rectangle Grid.Row="0" Margin="0,29,0,0">
+                    <Rectangle.Fill>
+                        <SolidColorBrush Color="Black" Opacity="0.1" />
+                    </Rectangle.Fill>
+                </Rectangle>
+
+                <!--Top view structure-->
+                <StackPanel Orientation="Horizontal">
+                    <Image Source="pack://application:,,,/Images/Icons/logo.jpg" Width="20" Height="20" Margin="3,0,0,0"/>
+
+                    <!--Title-->
+                    <TextBlock Text="Guard Pass" Style="{StaticResource TextStyle}" Margin="5,0,0,0"/>
+
+                    <!--Drapeau= Language-->
+                    <Button x:Name="Btn_Language" Click="Btn_Language_Click" Background="Transparent" BorderBrush="Transparent" Width="25" Height="15" HorizontalAlignment="Right" Margin="620,0,0,0">
+                        <Image x:Name="Image_Flag" Source="pack://application:,,,/Images/Icons/fr.jpg"/>
+                    </Button>
+
+                    <!--Button minus-->
+                    <Button Name="Btn_Minus" Style="{StaticResource BtnWindowStyle}" Margin="15,0,10,0" Cursor="Hand" Click="btnMinimize_Click">
+                        <fa:ImageAwesome Icon="Minus" Foreground="{StaticResource TitleColor}"/>
+                    </Button>
+
+                    <!--Button close-->
+                    <Button Name="Btn_Close" Style="{StaticResource BtnWindowStyle}" Margin="10,0,10,0" Cursor="Hand" Click="btnClose_Click">
+                        <fa:ImageAwesome Icon="Times" Foreground="{StaticResource TitleColor}"/>
+                    </Button>
+                </StackPanel>
+
+                <!--..............BOTTOM VIEW................-->
+                <StackPanel Grid.Row="1">
+                    <Grid Height="515">
+                        <Grid.ColumnDefinitions>
+                            <ColumnDefinition Width="50"/>
+                            <ColumnDefinition Width="*"/>
+                        </Grid.ColumnDefinitions>
+
+                        <!--Background left vertical bar-->
+                        <Rectangle Grid.Row="0">
+                            <Rectangle.Fill>
+                                <SolidColorBrush Color="{StaticResource Border}" Opacity="0.8" />
+                            </Rectangle.Fill>
+                        </Rectangle>
+
+                        <!--........LEFT VIEW.........-->
+                        <StackPanel x:Name="StackPanel_RadioButton">
+                            <!--RB Application-->
+                            <RadioButton x:Name="RB_Application" Style="{StaticResource RadioStyle}" Tag="{StaticResource IconColor1}" Checked="RadioButton_Checked">
+                                <StackPanel Orientation="Horizontal">
+                                    <fa:ImageAwesome Icon="Windows" Style="{StaticResource IconStyle}" />
+                                </StackPanel>
+                            </RadioButton>
+
+                            <!--RB Social network-->
+                            <RadioButton x:Name="RB_SocialNetwork" Style="{StaticResource RadioStyle}" Tag="{StaticResource IconColor2}" Checked="RadioButton_Checked">
+                                <StackPanel Orientation="Horizontal">
+                                    <fa:ImageAwesome Icon="Twitter" Style="{StaticResource IconStyle}" />
+                                </StackPanel>
+                            </RadioButton>
+
+                            <!--RB Game-->
+                            <RadioButton x:Name="RB_Game" Style="{StaticResource RadioStyle}" Tag="{StaticResource IconColor1}" Checked="RadioButton_Checked">
+                                <StackPanel Orientation="Horizontal">
+                                    <fa:ImageAwesome Icon="Gamepad" Style="{StaticResource IconStyle}" />
+                                </StackPanel>
+                            </RadioButton>
+
+                            <!--RB Private-->
+                            <RadioButton x:Name="RB_Private" Style="{StaticResource RadioStyle}" Tag="{StaticResource IconColor2}" Checked="RadioButton_Checked">
+                                <StackPanel Orientation="Horizontal">
+                                    <fa:ImageAwesome Icon="Lock" Style="{StaticResource IconStyle}" />
+                                </StackPanel>
+                            </RadioButton>
+
+                            <!--RB Other-->
+                            <RadioButton x:Name="RB_Other" Style="{StaticResource RadioStyle}" Tag="{StaticResource IconColor1}" Checked="RadioButton_Checked">
+                                <StackPanel Orientation="Horizontal">
+                                    <fa:ImageAwesome Icon="Bars" Style="{StaticResource IconStyle}" />
+                                </StackPanel>
+                            </RadioButton>
+                        </StackPanel>
+
+                        <!--........RIGHT VIEW.........-->
+                        <TextBlock Name="Text_WindowName" Grid.Column="1" Text="Application" Style="{StaticResource TitleStyle}" VerticalAlignment="Top" Margin="10" FontSize="20"/>
+
+                        <ListView x:Name="ListView" Grid.Column="1" Margin="0,40,0,55" Background="Transparent" BorderBrush="Transparent">
+                            <ListView.ItemTemplate>
+                                <DataTemplate>
+                                    <Grid Width="710" Height="70">
+                                        <!--Background-->
+                                        <Rectangle RadiusX="10" RadiusY="10">
+                                            <Rectangle.Fill>
+                                                <SolidColorBrush Color="{StaticResource Color3}" Opacity="0.9" />
+                                            </Rectangle.Fill>
+                                        </Rectangle>
+
+                                        <!--Icon-->
+                                        <Rectangle RadiusX="20" RadiusY="20" Width="60" Height="60" Fill="#3c9690" HorizontalAlignment="Left" Margin="5"/>
+                                        <Rectangle RadiusX="20" RadiusY="20" Width="55" Height="55" HorizontalAlignment="Left" Margin="7">
+                                            <Rectangle.Fill>
+                                                <ImageBrush ImageSource="{Binding imagePath}"/>
+                                            </Rectangle.Fill>
+                                        </Rectangle>
+
+                                        <!--Title-->
+                                        <TextBlock Text="{Binding name}" HorizontalAlignment="Left" Margin="85,5,0,0" Height="25" VerticalAlignment="Top" Style="{StaticResource TemplateTitleStyle}"/>
+
+                                        <!--Button delete-->
+                                        <Button x:Name="Button_Trash" HorizontalAlignment="Right" VerticalAlignment="Center" Style="{StaticResource BtnIconTemplateStyle}" Margin="0,0,10,0" Click="Button_Trash_Click" Tag="{Binding ID}">
+                                            <fa:ImageAwesome Icon="Trash" Foreground="#edf5f4" Margin="7"/>
+                                        </Button>
+
+                                        <!--User-->
+                                        <fa:ImageAwesome Icon="User" Width="25" Height="25" Foreground="#226D68" Margin="80,10,0,0" HorizontalAlignment="Left"/>
+                                        <TextBox Text="{Binding user}" Width="230" Height="25" Margin="110,10,0,0" HorizontalAlignment="Left" IsReadOnly="True" VerticalContentAlignment="Center" FontSize="14"/>
+
+                                        <!--password-->
+                                        <fa:ImageAwesome Icon="Lock" Width="25" Height="25" Foreground="#226D68" Margin="390,10,0,0" HorizontalAlignment="Left"/>
+                                        <TextBox Text="{Binding password}" Width="230" Height="25" Margin="420,10,0,0" HorizontalAlignment="Left" IsReadOnly="True" VerticalContentAlignment="Center" FontSize="14"/>
+                                    </Grid>
+                                </DataTemplate>
+                            </ListView.ItemTemplate>
+                        </ListView>
+                         
+                        <!--Button add-->
+                        <Button x:Name="Btn_Add" Grid.Column="1" Style="{StaticResource BtnAddStyle}" VerticalAlignment="Bottom" Margin="-20,0,0,10" Click="Btn_Add_Click"/>
+
+                    </Grid>
+                </StackPanel>
+            </Grid>
+        </Border>
+    </Border>
+</Window>

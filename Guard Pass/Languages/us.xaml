@@ -1,0 +1,21 @@
+﻿<ResourceDictionary xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+                    xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml" 
+                    xmlns:system="clr-namespace:System;assembly=netstandard">
+
+    <!--.................French translate..............-->
+    <!--Register Window-->
+    <system:String x:Key="CreateAccount">Create an account</system:String>
+    <system:String x:Key="Password">Password</system:String>
+    <system:String x:Key="ValidPassword">Confirm password</system:String>
+    <system:String x:Key="Register">Register</system:String>
+    <system:String x:Key="AlreadyAccount">Already an </system:String>
+    <system:String x:Key="Account">account</system:String>
+
+    <!--Login window-->
+    <system:String x:Key="LoginAccount">Login</system:String>
+    <system:String x:Key="WantAccount">Need an </system:String>
+
+    <!--Add Window-->
+    <system:String x:Key="ValidAdd">Add</system:String>
+    
+</ResourceDictionary>

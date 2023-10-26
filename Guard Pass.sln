@@ -1,0 +1,25 @@
+﻿
+Microsoft Visual Studio Solution File, Format Version 12.00
+# Visual Studio Version 17
+VisualStudioVersion = 17.7.34003.232
+MinimumVisualStudioVersion = 10.0.40219.1
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Guard Pass", "Guard Pass\Guard Pass.csproj", "{A15953C2-A515-4981-A1D5-9D40C7C0623E}"
+EndProject
+Global
+	GlobalSection(SolutionConfigurationPlatforms) = preSolution
+		Debug|Any CPU = Debug|Any CPU
+		Release|Any CPU = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(ProjectConfigurationPlatforms) = postSolution
+		{A15953C2-A515-4981-A1D5-9D40C7C0623E}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{A15953C2-A515-4981-A1D5-9D40C7C0623E}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{A15953C2-A515-4981-A1D5-9D40C7C0623E}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{A15953C2-A515-4981-A1D5-9D40C7C0623E}.Release|Any CPU.Build.0 = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(SolutionProperties) = preSolution
+		HideSolutionNode = FALSE
+	EndGlobalSection
+	GlobalSection(ExtensibilityGlobals) = postSolution
+		SolutionGuid = {A247899D-55C0-4FA8-B1F5-2CADB7C1A4FF}
+	EndGlobalSection
+EndGlobal

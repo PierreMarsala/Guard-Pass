@@ -1,0 +1,108 @@
+﻿<Project Sdk="Microsoft.NET.Sdk">
+
+  <PropertyGroup>
+    <OutputType>WinExe</OutputType>
+    <TargetFramework>net7.0-windows</TargetFramework>
+    <RootNamespace>Guard_Pass</RootNamespace>
+    <Nullable>enable</Nullable>
+    <UseWPF>true</UseWPF>
+  </PropertyGroup>
+
+  <ItemGroup>
+    <None Remove="Images\Backgrounds\*" />
+    <None Remove="Images\Icons\*" />
+  </ItemGroup>
+
+  <ItemGroup>
+    <Folder Include="Security\Account\" />
+    <Folder Include="Security\Data\Application\" />
+    <Folder Include="Security\Data\Game\" />
+    <Folder Include="Security\Data\Other\" />
+    <Folder Include="Security\Data\Private\" />
+    <Folder Include="Security\Data\Social Network\" />
+  </ItemGroup>
+
+  <ItemGroup>
+    <Resource Include="Images\Backgrounds\*" />
+  </ItemGroup>
+
+  <ItemGroup>
+    <Resource Include="Images\Icons\*" />
+  </ItemGroup>
+
+  <ItemGroup>
+    <PackageReference Include="FontAwesome.WPF" Version="4.7.0.9" />
+  </ItemGroup>
+
+  <ItemGroup>
+    <Content Include="Images\Templates\*">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </Content>
+  </ItemGroup>
+
+  <ItemGroup>
+    <None Remove="Images\Templates\1.png" />
+    <None Remove="Images\Templates\10.png" />
+    <None Remove="Images\Templates\11.png" />
+    <None Remove="Images\Templates\12.png" />
+    <None Remove="Images\Templates\13.png" />
+    <None Remove="Images\Templates\14.png" />
+    <None Remove="Images\Templates\15.png" />
+    <None Remove="Images\Templates\16.png" />
+    <None Remove="Images\Templates\17.png" />
+    <None Remove="Images\Templates\18.png" />
+    <None Remove="Images\Templates\19.png" />
+    <None Remove="Images\Templates\2.png" />
+    <None Remove="Images\Templates\20.png" />
+    <None Remove="Images\Templates\21.png" />
+    <None Remove="Images\Templates\22.png" />
+    <None Remove="Images\Templates\23.png" />
+    <None Remove="Images\Templates\24.png" />
+    <None Remove="Images\Templates\25.png" />
+    <None Remove="Images\Templates\26.png" />
+    <None Remove="Images\Templates\27.png" />
+    <None Remove="Images\Templates\28.png" />
+    <None Remove="Images\Templates\29.png" />
+    <None Remove="Images\Templates\3.png" />
+    <None Remove="Images\Templates\30.png" />
+    <None Remove="Images\Templates\31.png" />
+    <None Remove="Images\Templates\32.png" />
+    <None Remove="Images\Templates\33.png" />
+    <None Remove="Images\Templates\34.png" />
+    <None Remove="Images\Templates\35.png" />
+    <None Remove="Images\Templates\36.png" />
+    <None Remove="Images\Templates\37.png" />
+    <None Remove="Images\Templates\38.png" />
+    <None Remove="Images\Templates\39.png" />
+    <None Remove="Images\Templates\4.png" />
+    <None Remove="Images\Templates\40.png" />
+    <None Remove="Images\Templates\41.png" />
+    <None Remove="Images\Templates\42.png" />
+    <None Remove="Images\Templates\43.png" />
+    <None Remove="Images\Templates\44.png" />
+    <None Remove="Images\Templates\45.png" />
+    <None Remove="Images\Templates\46.png" />
+    <None Remove="Images\Templates\47.png" />
+    <None Remove="Images\Templates\48.png" />
+    <None Remove="Images\Templates\49.png" />
+    <None Remove="Images\Templates\5.png" />
+    <None Remove="Images\Templates\50.png" />
+    <None Remove="Images\Templates\51.png" />
+    <None Remove="Images\Templates\52.png" />
+    <None Remove="Images\Templates\6.png" />
+    <None Remove="Images\Templates\7.png" />
+    <None Remove="Images\Templates\8.png" />
+    <None Remove="Images\Templates\9.png" />
+  </ItemGroup>
+
+  <ItemGroup>
+    <None Update="Config\Parameters.json">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </None>
+    <None Update="Security\Data\temp.txt">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </None>
+  </ItemGroup>
+  
+  
+</Project>
